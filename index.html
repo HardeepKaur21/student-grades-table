@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <link rel="stylesheet" href="style.css" class="stylesheet" />
+  </head>
+  <body>
+    <h1>Students' Grades Table</h1>
+    <div class="controls">
+      <button id="addRowBtn">Add Row</button>
+      <button id="addColBtn">Add Assignment Column</button>
+      <button id="saveBtn">Save Table</button>
+      <button id="restoreBtn">Restore Saved Table</button>
+    </div>
+    <!-- Table stuff -->
+    <table id="gradesTable">
+      <thead>
+        <tr>
+          <th class="th-left">Name</th>
+          <th class="th-left">Student ID</th>
+          <th class="th-center">Assignment 1</th>
+          <th class="th-center">Assignment 2</th>
+          <th class="th-center">Assignment 3</th>
+          <th class="th-center">Assignment 4</th>
+          <th class="th-center">Assignment 5</th>
+          <th id="averageHeader">Average [%]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-left">Joe Bloggs</td>
+          <td class="td-left">123456001</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="td-left">Joe Bloggs</td>
+          <td class="td-left">123456001</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="td-left">Joe Bloggs</td>
+          <td class="td-left">123456001</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="td-left">Joe Bloggs</td>
+          <td class="td-left">123456001</td>
+          <td>-</td>
+          <td>85</td>
+          <td>85</td>
+          <td>-</td>
+          <td>-</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="td-left">Joe Bloggs</td>
+          <td class="td-left">123456001</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="td-left">Joe Bloggs</td>
+          <td class="td-left">123456001</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="td-left">Joe Bloggs</td>
+          <td class="td-left">123456001</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="td-left">Joe Bloggs</td>
+          <td class="td-left">123456001</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="td-left">Joe Bloggs</td>
+          <td class="td-left">123456001</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="td-left">Joe Bloggs</td>
+          <td class="td-left">123456001</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td>85</td>
+          <td>-</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="unsubmittedBox"></div>
+
+    <!-- Custom menu stuff -->
+    <div id="ctxMenu" class="ctx-menu" hidden>
+      <ul>
+        <!-- row actions -->
+        <li data-action="insert-row-above" class="ctx-item row-only">
+          Insert Row Above
+        </li>
+        <li data-action="insert-row-below" class="ctx-item row-only">
+          Insert Row Below
+        </li>
+        <li data-action="delete-row" class="ctx-item row-only danger">
+          Delete Row
+        </li>
+
+        <!-- column actions -->
+        <li data-action="insert-col-before" class="ctx-item th-only">
+          Insert Column Before
+        </li>
+        <li data-action="delete-col" class="ctx-item th-only danger">
+          Delete Column
+        </li>
+
+        <li class="ctx-sep"></li>
+
+        <li data-action="undelete" class="ctx-item disabled">Undelete</li>
+      </ul>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
